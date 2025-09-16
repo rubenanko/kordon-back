@@ -16,6 +16,6 @@ CONFIG.read(CONFIG_PATH)
 
 @app.route('/api/v1/auth/login',methods=['POST'])
 def login():
-    token = request.data.get('token')
-    response = "true" if token == "test" else "false"
+    token = request.get_json()["token"]
+    response = {"success": True } if token == "test" else {"success": False }
     return response

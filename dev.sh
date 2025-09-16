@@ -1,1 +1,1 @@
-venv/Scripts/python -m flask --app ./src/app.py run
+venv/Scripts/python -m flask --app ./kordon/app.py run
